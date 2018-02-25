@@ -1,0 +1,55 @@
+//Int -> Array -> sortieren -> int 
+
+
+public class DescendingOrder {
+  public static int sortDesc(final int num) {
+  
+   int y = 0;
+    int number = num;
+    int number1 = num;
+    int zahl=0;
+    int länge = 0;
+    
+    do { 
+    	   number =number/10; 
+    	   länge = länge + 1;
+    	   } while (number != 0);   
+    
+    
+    int [] x = new int[länge];
+    
+    
+    
+    
+do { 
+   x[y] = number1 % 10; 
+   number1 =number1/10; 
+   y++; 
+   } while (number1 != 0); 
+
+ 
+ for(int i =0;i<x.length;i++){
+
+     for(int a = i+1;a<x.length;a++){
+     
+     if(x[i]<x[a]){
+       int temp = x[i];
+       x[i] = x[a];
+       x[a] = temp;
+     }
+ }
+ 
+}
+ int j=0;
+ 
+ do{
+	zahl = zahl*10 + x[j];
+	j++;
+ }
+ while (j < x.length);
+ return zahl;	
+ 
+ 
+ }
+
+}
