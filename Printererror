@@ -1,0 +1,36 @@
+package Level7;
+
+public class Printer {
+
+	public static void main(String[]args){
+		
+		String s= "aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz";
+		System.out.println(printerError(s));
+	}
+	
+	
+	  public static String printerError(String s) {
+	       
+		  int Stringleange = 0;
+		  int Fehler = 0;
+		  
+		  char[] sarray = s.toCharArray();
+		  
+		  for(int i=0;i<sarray.length;i++){
+			  
+			  if(sarray[i] >= 97 && sarray[i] <= 109){
+				  Stringleange = Stringleange +1;
+			  }
+			  else{
+				  Fehler = Fehler +1;
+			  }
+			  
+		  }
+		  
+		  String a = String.valueOf(Fehler);
+		  String b = String.valueOf(Stringleange+Fehler);
+		  
+		  return a +"/"+ b;
+		  
+	    }
+	}
