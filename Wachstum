@@ -5,7 +5,8 @@ class Arge {
     	double cpop = p0;
     
     	do{
-    		cpop = cpop + aug + (cpop*(percent/100));
+        int inc = (int) (cpop*(percent/100));
+    		cpop = cpop + aug + inc ;
     		zähler = zähler +1;
     	}
     	while(cpop<=p);
