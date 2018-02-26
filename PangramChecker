@@ -1,0 +1,35 @@
+public class PangramChecker {
+  public boolean check(String sentence){
+		int asciU = 64;
+		int asciL = 96;
+		int zähler = 0;
+		boolean stopper = false;
+		char[] satz = sentence.toCharArray();
+
+		
+			for(int b = 0; b<26; b++){
+				asciU = asciU + 1;
+				asciL = asciL + 1;
+				stopper = false;
+				
+				for(int c = 0; c<sentence.length(); c++){
+					if(satz[c]== asciU || satz[c] == asciL){
+						if(stopper == false){
+							zähler = zähler +1;
+							stopper = true;
+					}
+					
+				}
+			
+
+										}
+												}
+			
+		if(zähler == 26){
+		return true;
+		}
+		else{
+		return false;
+		}	
+	}
+}
