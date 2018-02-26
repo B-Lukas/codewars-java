@@ -1,0 +1,17 @@
+class Arge {
+    
+    public static int nbYear(int p0, double percent, int aug, int p) {
+      	int zähler = 0;
+    	double cpop = p0;
+    
+    	do{
+    		cpop = cpop + aug + (cpop*(percent/100));
+    		zähler = zähler +1;
+    	}
+    	while(cpop<=p);
+    	
+    	int ergebnis = zähler;
+    	return ergebnis;
+
+    }
+}
