@@ -1,4 +1,4 @@
 # Codewars-Java
 
 Rank:
-kyu = Higher is better
+kyu = Lower is better
